@@ -1,0 +1,12 @@
+# Virtuelle Umgebung
+venv/
+
+# Environment-Variablen (API-Keys!)
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Chainlit
+.files/
