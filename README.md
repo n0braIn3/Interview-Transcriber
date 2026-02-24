@@ -85,3 +85,16 @@ chatbot/
 │   └── config.toml         # Chainlit-Konfiguration (Audio aktiviert)
 └── chainlit.md             # Willkommensseite im Chat
 ```
+
+---
+
+## Changelog
+
+### 24.02.2026
+1. Doppelten `@cl.on_audio_chunk`-Block (leer, mit `pass`) entfernt – hat Audio-Logik blockiert
+2. `[features.audio] enabled = true` in `.chainlit/config.toml` gesetzt – Mikrofon-Button war deaktiviert
+3. `audioop.rms()` durch numpy-basierte `compute_rms()` ersetzt – `audioop` in Python 3.13 entfernt
+4. `@cl.on_audio_end`-Handler hinzugefügt – Chainlit 2.x erwartet diesen, sonst `NoneType`-Error
+5. Audio-Datei mit Filename an Whisper API übergeben (`("audio.wav", buffer, "audio/wav")`) – sonst `Unrecognized file format`
+6. API-Key aus Code in `.env`-Datei verschoben – Sicherheitsrisiko behoben
+7. Unbenutzte Imports entfernt (`audioop`, `httpx`)
