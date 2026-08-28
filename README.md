@@ -80,7 +80,7 @@ Bei der Spracheingabe wird das Audio automatisch per OpenAI Whisper transkribier
 chatbot/
 ├── chatbot.py              # Hauptprogramm
 ├── requirements.txt        # Python-Abhängigkeiten
-├── .env                    # API-Key (NICHT weitergeben!)
+├── .env                    # API-Key
 ├── .chainlit/
 │   └── config.toml         # Chainlit-Konfiguration (Audio aktiviert)
 └── chainlit.md             # Willkommensseite im Chat
